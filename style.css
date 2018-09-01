@@ -6,13 +6,29 @@
 }
 
 header {
+    position: relative;
     margin-top: 20px;
     width: 100vw;
+}
+
+.scrollArrow {
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.arrowContainer {
+    width: 50px;
+    height: 50px;
+    border-radius: 60px;
+    background-color: #81D398;
+    margin-left: 580px;
 }
 
 .logo {
     margin-left: 100px;
     display: inline-block;
+    color: white;
 }
 
 nav {
@@ -24,7 +40,18 @@ nav {
     margin: 0 1.5em 0 0;
 }
 
-.nav-item h3:hover {
+.nav-item a {
+    color: white;
+}
+
+.nav-item a:hover {
+    color: #202b47;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: #d3d3d3;
+}
+
+.help a:hover {
     color: #202b47;
     border-radius: 5px;
     background-color: #fff;
@@ -61,9 +88,18 @@ input {
     width: 300px;
     height: 50px;
     border-radius: 10px;
+    margin-right: 10px;
 }
 
-section h4 {
+#main-input button {
+    color: white;
+    background-color: #81D398;
+    border-radius: 5px;
+    border: none;
+    padding: 15px 22px 15px 22px;
+}
+
+#main h4 {
     margin-top: 100px;
 }
 
@@ -89,8 +125,8 @@ img {
 
 .contain {
     align-items: center;
-    width: 461px;
-    height: 130px;
+    width: 534px;
+    height: 160px;
     background-color: rgb(218, 218, 218);
     border: 1px solid rgb(211, 207, 207);
     border-radius: 20px;
@@ -98,7 +134,8 @@ img {
 }
 
 #about p {
-    font-size: 12px;
+    font-size: 14px;
+    margin-left: 10px;
 }
 
 .about-container {
@@ -106,35 +143,49 @@ img {
     flex-wrap: wrap;
 }
 
+.about-text {
+    font-size: 12px;
+}
+
+.about-text p {
+    color: #C5C5CA;
+}
+
 .about-text h3 {
     text-align: left;
     font-size: 16px;
+    margin-left: 30px;
 }
 
 .services {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 170px;
-}
-
-#about h4 {
-    margin-top: 40px;
-    text-align: left;
+    /* margin-left: 170px; */
+    justify-content: center;
 }
 
 .newaccount {
     display: flex;
     flex-wrap: wrap;
+    margin: 50px 0 50px 0;
 }
 
-#about button {
-    height: 20px;
-    margin-right: 10px;
-    margin: 72px 0 0 10px;
+.newaccount h4 {
+    text-align: left;
+}
+
+#about h3 {
+    text-align: center;
 }
 
 #about-buttons {
-    margin-left: 234px;
+    margin: 28px 0 0 250px;
+    font-size: 14px;
+}
+
+#about-buttons button {
+    height: 30px;
+    border-radius: 10px;
 }
 
 .footer {
@@ -148,70 +199,141 @@ img {
 
 .footer-data {
     margin: 60px 87px 0 0;
+    color: white;
 }
 
-.diagonal {
-    z-index: -1;
-    padding: 3em;
-    background-color: #7653E5;
+.footer-data p {
+    color: #E7E7F8;
 }
 
-/* .section-diagonal {
-    z-index: 0;
-    padding: 3em;
-    background-color: #7653E5;
-} */
-
-.diagonal:before {
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg);
-    -webkit-transform-origin: 3% 0;
-    transform-origin: 3% 0;
-    top: 0;
-    left: -25%;
-    z-index: 0;
-    width: 100%;
-    height: 30%;
-    background-color: #752DD2;
+@media (min-width: 1000px) {
+    .diagonal {
+        z-index: 0;
+        padding: 3em;
+        background-color: #7653E5;
+    }
+    .diagonal:before {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+        -webkit-transform-origin: 3% 0;
+        transform-origin: 3% 0;
+        top: 0;
+        left: -25%;
+        z-index: -1;
+        width: 100%;
+        height: 148%;
+        background-color: #752DD2;
+    }
+    .diagonal:after {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+        -webkit-transform-origin: 3% 0;
+        transform-origin: 3% 0;
+        top: 0;
+        left: -40%;
+        z-index: -2;
+        width: 140%;
+        height: 467%;
+        background-color: #7653E5;
+    }
+    header:before {
+        position: absolute;
+        content: '';
+    }
+    header:after {
+        position: absolute;
+        content: '';
+    }
+    .section-diagonal:before {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+        -webkit-transform-origin: 3% 0;
+        transform-origin: 3% 0;
+        top: 0;
+        left: -25%;
+        z-index: -2;
+        width: 124%;
+        height: 84%;
+        background-color: #726fdf;
+    }
+    section:before {
+        position: absolute;
+        content: '';
+    }
 }
 
-.diagonal:after {
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg);
-    -webkit-transform-origin: 3% 0;
-    transform-origin: 3% 0;
-    top: 0;
-    left: -25%;
-    z-index: -2;
-    width: 170%;
-    height: 85%;
-    background-color: #7653E5;
+#main-account p {
+    color: #C5C5CA
 }
 
-header:before {
-    position: absolute;
-    content: '';
+.purple {
+    color: #4E53A2;
 }
 
-header:after {
-    position: absolute;
-    content: '';
+html {
+    overflow-x: hidden
 }
 
-.section-diagonal:before {
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg);
-    -webkit-transform-origin: 3% 0;
-    transform-origin: 3% 0;
-    top: 0;
-    left: -25%;
-    z-index: -2;
-    width: 124%;
-    height: 100%;
-    background-color: #726fdf;
+.light-purple {
+    color: #C6C7EF;
 }
 
-section:before {
-    position: absolute;
-    content: '';
+.purple-button {
+    background-color: #726FDF;
+    padding: 0 15px 0 15px;
+    color: white;
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.purple-button1 {
+    background-color: #726FDF;
+    padding: 10px 15px 10px 15px;
+    color: white;
+    font-size: 14px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.white-button {
+    padding: 0 15px 0 15px;
+}
+
+.help a {
+    color: white;
+    margin-right: 15px;
+}
+
+.help button {
+    color: white;
+    background-color: #81D398;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 22px 5px 22px;
+    margin-top: -4px;
+}
+
+.arrow-learn {
+    margin-top: 190px;
+}
+
+.arrow-learn h4 {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #E7E7F8;
+}
+
+.green {
+    color: #81D398;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.white {
+    color: white;
+}
+
+#displayh1 {
+    display: inline-block;
+    color: white;
 }
