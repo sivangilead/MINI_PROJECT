@@ -5,7 +5,7 @@ window.onload = function () {
 
     function listener() {
         var timerID = setInterval(function () {
-            window.scrollBy(0, 5);
+            window.scrollBy(0, 10);
 
             if (window.pageYOffset >= 700)
                 clearInterval(timerID);
