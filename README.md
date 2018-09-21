@@ -1,1 +1,1 @@
-# MINI_PROJECT
+# Responsive Design Landing Page
